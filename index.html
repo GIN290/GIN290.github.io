@@ -292,7 +292,7 @@
 <p><strong>下面讲解的前提</strong></p>
 <img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220408115912257.png" alt="image-20220408115912257" style="zoom:50%;">
 
-<h3 id="直接寻址"><a href="#直接寻址" class="headerlink" title="直接寻址"></a>直接寻址</h3><p>直接寻址：指令字仲的形式地址A就是操作数的真实地址EA，即EA &#x3D; A</p>
+<h3 id="直接寻址"><a href="#直接寻址" class="headerlink" title="直接寻址"></a>直接寻址</h3><p>直接寻址：指令字中的形式地址A就是操作数的真实地址EA，即EA &#x3D; A</p>
 <p>关于直接寻址的缺点的说明：</p>
 <p>给出的形式地址的位数是有限的，所以寻址范围不会特别大</p>
 <p>操作数的地址不易修改是说：操作数存储地址发生改变，那么原来的这个形式地址就失效了，必须把形式地址也做出改变，比较麻烦</p>
@@ -363,6 +363,31 @@
 
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220408154016102.png" alt="image-20220408154016102" style="zoom:50%;">
 
+<h3 id="本节回顾-3"><a href="#本节回顾-3" class="headerlink" title="本节回顾"></a>本节回顾</h3><img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220408195307981.png" alt="image-20220408195307981" style="zoom:50%;">
+
+<h3 id="硬件实现数的“比较”"><a href="#硬件实现数的“比较”" class="headerlink" title="硬件实现数的“比较”"></a>硬件实现数的“比较”</h3><img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220408195911096.png" alt="image-20220408195911096" style="zoom:50%;">
+
+<h2 id="2-2-3堆栈寻址"><a href="#2-2-3堆栈寻址" class="headerlink" title="2.2.3堆栈寻址"></a>2.2.3堆栈寻址</h2><h3 id="本节总览-2"><a href="#本节总览-2" class="headerlink" title="本节总览"></a>本节总览</h3><img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220408200040091.png" alt="image-20220408200040091" style="zoom:50%;">
+
+<p>堆栈寻址：操作数存放在堆栈中，隐含使用堆栈指针（SP）作为操作数地址。</p>
+<img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220408200403316.png" alt="image-20220408200403316" style="zoom:50%;">
+
+<p>堆栈是存储器（或专用寄存器组)中一块特定的按“后进先出（LIFO)”原则管理的存储区，该存储区中被读&#x2F;写单元的地址是用一个特定的寄存器给出的，该寄存器称为堆栈指针(SP) 。</p>
+<img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220408201425918.png" alt="image-20220408201425918" style="zoom:50%;">
+
+<p>分为软硬堆栈</p>
+<img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220408201654780.png" alt="image-20220408201654780" style="zoom:50%;">
+
+<p>入栈&#x2F;出栈时EA时SP+-1得到的，不过是硬件完成的</p>
+<h3 id="本节回顾-4"><a href="#本节回顾-4" class="headerlink" title="本节回顾"></a>本节回顾</h3><img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220408202046415.png" alt="image-20220408202046415" style="zoom:50%;">
+
+<h2 id="3-CISC和RISC"><a href="#3-CISC和RISC" class="headerlink" title="3.CISC和RISC"></a>3.CISC和RISC</h2><h3 id="本章总览"><a href="#本章总览" class="headerlink" title="本章总览"></a>本章总览</h3><p>CISC：Complex Instruction Set Computer        RISC：Reduced Instruction Set Computer</p>
+<p>设计思路：一条指令完成一个复杂的基本功能     设计思路：一条指令完成一个基本“动作”；多条指令组合完成一个复杂的功能。</p>
+<img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220409083707246.png" alt="image-20220409083707246" style="zoom:50%;">
+
+<h3 id="二者的对比"><a href="#二者的对比" class="headerlink" title="二者的对比"></a>二者的对比</h3><img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/image-20220409084027531.png" alt="image-20220409084027531" style="zoom:50%;">
+
+<h1 id="书中重点"><a href="#书中重点" class="headerlink" title="书中重点"></a>书中重点</h1><img src="/2022/04/08/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0/重点.png" alt="重点" style="zoom:67%;">
 
       
 
